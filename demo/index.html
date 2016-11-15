@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>forge-array-input demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../forge-array-input.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Simple String Array Input</h3>
+      <demo-snippet>
+        <template>
+          <forge-array-input
+            value='["Homer", "Bart"]'
+            label="Array Input"
+            field-name="MyFieldName"
+            entity='{"entityId":"testEntityId","id":"testId","type":"testType"}'
+            schema='{"type":"array","title":"Array Input", "items" : { "type": "string" }}'>
+          </forge-array-input>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Enum Array Input</h3>
+      <demo-snippet>
+        <template>
+          <forge-array-input
+             value='["Gino", "Pilotino"]'
+             label="Enum Array Input"
+             field-name="MyFieldName"
+             entity='{"entityId":"testEntityId","id":"testId","type":"testType"}'
+             schema='{"type":"array","title":"Enum Array Input", "items" : { "type": "string", "enum": ["Gino", "Pilotino", "Paolino", "Paperino", "Giacomino"] }}'>
+           </forge-array-input>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Simple String Array Input Disabled</h3>
+      <demo-snippet>
+        <template>
+          <forge-array-input
+            value='["Homer", "Bart"]'
+            disabled="true"
+            label="Array Input"
+            field-name="MyFieldName"
+            entity='{"entityId":"testEntityId","id":"testId","type":"testType"}'
+            schema='{"type":"array","title":"Array Input", "items" : { "type": "string" }}'>
+          </forge-array-input>
+        </template>
+      </demo-snippet>
+    </div>
+
+    <div class="vertical-section-container centered">
+      <h3>Enum Array Input Disabled</h3>
+      <demo-snippet>
+        <template>
+          <forge-array-input
+            value='["Gino", "Pilotino"]'
+            disabled="true"
+            label="Enum Array Input"
+            field-name="MyFieldName"
+            entity='{"entityId":"testEntityId","id":"testId","type":"testType"}'
+            schema='{"type":"array","title":"Enum Array Input", "items" : { "type": "string", "enum": ["Gino", "Pilotino", "Paolino", "Paperino", "Giacomino"] }}'>
+          </forge-array-input>
+        </template>
+      </demo-snippet>
+    </div>
+  </body>
+</html>
